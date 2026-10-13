@@ -1,8 +1,8 @@
 %define module tldextract
 
 Name:		python-tldextract
-Version:	5.3.1
-Release:	2
+Version:	5.4.0
+Release:	1
 Summary:        Accurately separate the TLD from the registered domain and subdomains of a URL
 License:	BSD-3-Clause
 Group:		Development/Python
@@ -19,6 +19,9 @@ BuildRequires:	python%{pyver}dist(wheel)
 BuildRequires:	python%{pyver}dist(pytest)
 BuildRequires:	python%{pyver}dist(pytest-mock)
 BuildRequires:	python%{pyver}dist(responses)
+
+%build -p
+export SETUPTOOLS_SCM_PRETEND_VERSION="%{version}"
 
 %description
 Accurately separate the TLD from the registered domain and
